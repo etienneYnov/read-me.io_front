@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import {MatAutocomplete} from '@angular/material';
-import {FormControl} from '@angular/forms';
-import {Observable} from 'rxjs/Observable';
-import {startWith} from 'rxjs/operators/startWith';
-import {map} from 'rxjs/operators/map';
-import {ReadMe} from './services/readMe.service';
+import { MatAutocomplete } from '@angular/material';
+import { FormControl } from '@angular/forms';
+import { Observable } from 'rxjs/Observable';
+import { startWith } from 'rxjs/operators/startWith';
+import { map } from 'rxjs/operators/map';
+import { ReadMe } from './services/readMe.service';
 import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -25,6 +26,7 @@ export class AppComponent implements OnInit {
 
   constructor(private readMe: ReadMe) {
     this.getVersion();
+    console.log(environment.api_url);
   }
 
   getVersion() {
@@ -42,8 +44,8 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.filteredOptions = this.myControl.valueChanges
       .pipe(
-        startWith(''),
-        map(val => this.filter(val))
+      startWith(''),
+      map(val => this.filter(val))
       );
   }
 
