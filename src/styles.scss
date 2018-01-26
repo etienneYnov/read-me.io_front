@@ -18,6 +18,7 @@ body {
 
 .mat-input-element{
     caret-color: $primaryColor;
+    color: $primaryFontColor;
 }
 
 .mat-focused .mat-form-field-label{
@@ -31,6 +32,15 @@ body {
 
 .mat-option-text{
     font-family: $fontFamily;
+    font-size: 22px;
+}
+
+.mat-option.mat-selected:not(.mat-option-disabled){
+    color: $primaryColor;
+}
+
+.mat-form-field.mat-focused.mat-primary .mat-select-arrow{
+    color: $primaryColor;
 }
 
 .mat-form-field{
@@ -38,9 +48,16 @@ body {
     font-size: $fontSize;
     width: 400px;
 }
+.mat-form-field:nth-child(2){
+    width: 250px;
+}
 
 .mat-button{
     font-family: $fontFamily;
     font-size: $fontSize;
     padding: 12px 16px;
+}
+
+.mat-select-panel{
+    max-height: initial!important;
 }

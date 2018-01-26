@@ -7,6 +7,7 @@ import { MatAutocompleteModule } from '@angular/material';
 import { MatFormFieldModule } from '@angular/material';
 import { MatInputModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material';
+import { MatSelectModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReadMe } from './services/readMe.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -24,8 +25,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatAutocompleteModule,
     MatFormFieldModule,
     MatInputModule,
-    BrowserAnimationsModule,
+    BrowserAnimationsModule, 
     MatButtonModule,
+    MatSelectModule,
     HttpClientModule
   ],
   providers: [ReadMe],
