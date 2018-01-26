@@ -6,6 +6,7 @@ import {startWith} from 'rxjs/operators/startWith';
 import {map} from 'rxjs/operators/map';
 import {ReadMe} from './services/readMe.service';
 import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
+import { extend } from 'webdriver-js-extender';
 
 @Component({
   selector: 'app-root',
@@ -43,8 +44,9 @@ export class AppComponent implements OnInit {
     );
   }
 
-  submitButton(event: any) {
+  submitButton(event: any, extension: any) {
     console.log(event);
+    console.log(extension);
   }
 
   ngOnInit() {
